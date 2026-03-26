@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- Объявляем тип документа и язык страницы -->
+<html lang="ru">
+
+<head>
+    <!-- Кодировка для поддержки русских символов -->
+    <meta charset="UTF-8">
+    <!-- Настройка для мобильных устройств -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы -->
+    <title>Квест по безопасности - Вопрос</title>
+
+    <!-- Favicon для браузеров -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- PWA иконки -->
+    <link rel="icon" type="image/png" sizes="192x192" href="IconKB3App_192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="IconKB3App_512x512.png">
+
+    <!-- Manifest для PWA -->
+    <link rel="manifest" href="manifest.json">
+
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключение шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Шапка с заголовком -->
+        <header class="header">
+            <h1>🔐 Квест по безопасности</h1>
+        </header>
+
+        <!-- Контейнер прогресс-бара для отображения прогресса прохождения -->
+        <div class="progress-container">
+            <!-- Текст с текущим прогрессом -->
+            <div class="progress-label">
+                <span>Прогресс</span>
+                <span id="progressText">1 из 15</span>
+            </div>
+            <!-- Визуальная полоса прогресса -->
+            <div class="progress-bar">
+                <!-- Заполненная часть прогресс-бара (ширина меняется через JS) -->
+                <div class="progress-fill" id="progressBar" style="width: 6.67%"></div>
+            </div>
+        </div>
+
+        <!-- Контейнер для вопроса -->
+        <div class="question-container">
+            <!-- Карточка с вопросом -->
+            <div class="card">
+                <!-- Бейдж с названием текущего этапа -->
+                <span class="stage-badge" id="stageTitle">Этап 1: Парольная защита</span>
+
+                <!-- Текст вопроса (заполняется через JavaScript) -->
+                <h2 class="question-text" id="questionText">
+                    Какой из следующих паролей является самым надежным?
+                </h2>
+
+                <!-- Форма с вариантами ответов -->
+                <form id="questionForm" class="question-form">
+                    <!-- Варианты ответов будут добавлены через JavaScript -->
+                </form>
+
+                <!-- Кнопка для проверки ответа -->
+                <div class="text-center">
+                    <button class="button button-primary button-lg" onclick="checkAnswer()">
+                        <span>✓</span>
+                        Ответ
+                    </button>
+                </div>
+
+                <!-- Блок для отображения результата (правильно/неправильно) -->
+                <div id="result"></div>
+
+                <!-- Кнопка перехода к следующему вопросу (скрыта по умолчанию) -->
+                <div class="text-center continue-button" id="continueButton">
+                    <button class="button button-success button-lg" onclick="nextQuestion()">
+                        <span>→</span>
+                        Продолжить
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Навигация для возврата в меню -->
+        <div class="nav-menu mt-3">
+            <a href="index.html" class="nav-button button-secondary">
+                <span>←</span>
+                Вернуться в меню
+            </a>
+        </div>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>&copy; КиберКвест 2025</p>
+        </footer>
+    </div>
+
+    <!-- Подключение JavaScript файла с логикой квеста -->
+    <script src="script.js"></script>
+</body>
+
+</html>

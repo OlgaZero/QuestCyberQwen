@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Объявляем тип документа и язык -->
+<html lang="ru">
+
+<head>
+    <!-- Кодировка для русских символов -->
+    <meta charset="UTF-8">
+    <!-- Настройка для мобильных устройств -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Заголовок страницы -->
+    <title>Таблица лидеров - Квест по безопасности</title>
+
+    <!-- Favicon для браузеров -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+    <!-- PWA иконки -->
+    <link rel="icon" type="image/png" sizes="192x192" href="IconKB3App_192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="IconKB3App_512x512.png">
+
+    <!-- Manifest для PWA -->
+    <link rel="manifest" href="manifest.json">
+
+
+    <!-- Подключение стилей -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Подключение шрифта -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Основной контейнер -->
+    <div class="container">
+        <!-- Шапка страницы -->
+        <header class="header">
+            <!-- Иконка кубка -->
+            <div class="cyber-icon">🏆</div>
+            <h1>Таблица лидеров</h1>
+            <p class="subtitle">Лучшие игроки квеста</p>
+        </header>
+
+        <!-- Карточка с таблицей лидеров -->
+        <div class="card">
+            <h2 class="text-center mb-3">🏅 Результаты участников</h2>
+
+            <!-- Таблица с результатами -->
+            <table class="leaderboard-table">
+                <!-- Заголовок таблицы -->
+                <thead>
+                    <tr>
+                        <th>Место</th>
+                        <th>Имя</th>
+                        <th>Очки</th>
+                        <th>Процент</th>
+                    </tr>
+                </thead>
+
+                <!-- Тело таблицы с данными -->
+                <tbody>
+                    <!-- Первое место (золото) -->
+                    <tr>
+                        <td>
+                            <span class="rank-badge"
+                                style="background: linear-gradient(135deg, #fbbf24, #f59e0b);">1</span>
+                        </td>
+                        <td><strong>Игрок 1</strong></td>
+                        <td>15 / 15</td>
+                        <td><span style="color: var(--secondary-color); font-weight: 700;">100%</span></td>
+                    </tr>
+
+                    <!-- Второе место (серебро) -->
+                    <tr>
+                        <td>
+                            <span class="rank-badge"
+                                style="background: linear-gradient(135deg, #94a3b8, #64748b);">2</span>
+                        </td>
+                        <td><strong>Игрок 2</strong></td>
+                        <td>12 / 15</td>
+                        <td><span style="color: var(--accent-color); font-weight: 700;">80%</span></td>
+                    </tr>
+
+                    <!-- Третье место (бронза) -->
+                    <tr>
+                        <td>
+                            <span class="rank-badge"
+                                style="background: linear-gradient(135deg, #b45309, #92400e);">3</span>
+                        </td>
+                        <td><strong>Игрок 3</strong></td>
+                        <td>9 / 15</td>
+                        <td><span style="color: var(--text-secondary); font-weight: 700;">60%</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Призыв к действию -->
+            <div class="text-center mt-3">
+                <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                    Пройдите квест и попадите в таблицу лидеров!
+                </p>
+                <a href="question.html" class="button button-primary button-lg">
+                    <span>🎮</span>
+                    Пройти квест
+                </a>
+            </div>
+        </div>
+
+        <!-- Навигация для возврата в меню -->
+        <div class="nav-menu">
+            <a href="index.html" class="nav-button button-secondary">
+                <span>←</span>
+                Вернуться в меню
+            </a>
+        </div>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <p>&copy; КиберКвест 2025</p>
+        </footer>
+    </div>
+</body>
+
+</html>
